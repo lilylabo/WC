@@ -1,0 +1,32 @@
+# ignore  configuration
+/engine/settings.php
+/.htaccess
+
+# ignore none bundled all plugins
+/*
+
+!/README.md
+!/.gitignore
+
+# don't ignore bundled plugins
+!/usc-e-shop/
+!/wcex_auto_delivery/
+!/wcex_dlseller/
+!/wcex_item_list_layout/
+!/wcex_mobile/
+
+
+# ignore IDE/hidden/OS cache files
+.*
+*‾
+/nbproject
+/nb-configuration.xml
+Session.vim
+*.tmproj
+*.tmproject
+tmtags
+Thumbs.db
+Desktop.ini
+
+# don't ignore travis config
+!/.travis.yml

@@ -1,0 +1,264 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WCEX DLSeller\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-06-12 00:00+0900\n"
+"PO-Revision-Date: 2010-06-12 00:00+0900\n"
+"Last-Translator: USconsort <nanbu@uscons.co.jp>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "DLSeller Setting"
+msgstr "ダウンロード販売 設定"
+
+msgid "Setting"
+msgstr "設定"
+
+msgid "DLSeller"
+msgstr "ダウンロード販売"
+
+msgid "Contents directory path"
+msgstr "コンテンツフォルダのパス"
+
+msgid "Please appoint the full path of the directory which contents file is in."
+msgstr "コンテンツファイルが入っているディレクトリのフルパスを指定します。"
+
+msgid "Terms of Use"
+msgstr "利用規約"
+
+msgid "Read Terms and Conditions"
+msgstr "利用規約を読む"
+
+msgid "Agree"
+msgstr "利用規約に同意する"
+
+msgid "Not agree"
+msgstr "利用規約に同意していません"
+
+msgid "Division"
+msgstr "区分"
+
+msgid "Validity(days)"
+msgstr "有効期間（日数）"
+
+msgid "dlValidity(days)"
+msgstr "再ダウンロード有効期限"
+
+msgid "Contract Period(Months)"
+msgstr "契約期間（月数）"
+
+msgid "Release Date"
+msgstr "公開日"
+
+msgid "Release date"
+msgstr "公開日"
+
+msgid "Version"
+msgstr "バージョン"
+
+msgid "Author"
+msgstr "制作"
+
+msgid "Purchases"
+msgstr "購入数"
+
+msgid "Downloads"
+msgstr "ダウンロード数"
+
+msgid "Go to Download Page"
+msgstr "ダウンロードページへ"
+
+msgid "Checkout"
+msgstr "チェックアウト"
+
+msgid "Confirm"
+msgstr "内容確認"
+
+msgid "Purchase"
+msgstr "購入する"
+
+msgid "Redownload"
+msgstr "再ダウンロード"
+
+msgid "Information"
+msgstr "インフォメーション"
+
+msgid "Download"
+msgstr "ダウンロード"
+
+msgid "Data file"
+msgstr "コンテンツファイル"
+
+msgid "Service"
+msgstr "サービス"
+
+msgid "No limit"
+msgstr "無期限"
+
+msgid "Continuation charging information is updated"
+msgstr "継続課金情報を更新しました。"
+
+msgid "Continue Members"
+msgstr "継続課金会員リスト"
+
+msgid "Edit continue member data"
+msgstr "継続課金会員情報"
+
+msgid "Continuation"
+msgstr "継続中"
+
+msgid "continuation"
+msgstr "継続中"
+
+msgid "Cncellation"
+msgstr "停止中"
+
+msgid "cancellation"
+msgstr "停止中"
+
+msgid "Modified"
+msgstr "更新日"
+
+msgid "2.Login"
+msgstr "ログイン"
+
+msgid "Order ID"
+msgstr "受注番号"
+
+msgid "Member ID"
+msgstr "会員番号"
+
+msgid "Name"
+msgstr "氏名"
+
+msgid "Amount"
+msgstr "金額"
+
+msgid "Shipped"
+msgstr "物販"
+
+msgid "You can add only one Monthly Subscription item in your shopping cart."
+msgstr "継続課金対象商品はカートに一つしか入れることができません。カートの商品を入れ替えますか？"
+
+msgid "You have Monthly Subscription item in your shopping cart. If you wantto add this item,you have to clear the item in your cart.Is it ok to clear your cart?"
+msgstr "この商品は継続課金対象商品です。この商品をカートに入れる場合は、現在のカートをクリアしなくてはいけません。カートをクリアしてよろしいですか？"
+
+msgid "This is Monthly Subscription item. If you want to add this item, youhave to clear theitem in your cart. Is it ok to clear your cart?"
+msgstr "現在カートに継続課金対象商品が入っています。この商品をカートに入れる場合は、現在のカートをクリアしなくてはいけません。カートをクリアしてよろしいですか？"
+
+msgid "Monthly Fee"
+msgstr "月額"
+
+msgid "Semiannual Fee"
+msgstr "半年額"
+
+msgid "Annual Fee"
+msgstr "年額"
+
+msgid "Normal Charging"
+msgstr "通常課金"
+
+msgid "Recurring Subscription"
+msgstr "継続課金"
+
+msgid "Item Code"
+msgstr "商品コード"
+
+msgid "Item Name"
+msgstr "商品名"
+
+msgid "File Name"
+msgstr "ファイル名"
+
+msgid "File name"
+msgstr "ファイル名"
+
+msgid "First Withdrawal Date"
+msgstr "初回引落し日"
+
+msgid "Next Withdrawal Date"
+msgstr "次回引落し日"
+
+msgid "Renewal Date"
+msgstr "次回契約更新日"
+
+msgid "Contract Period"
+msgstr "ご契約期間"
+
+msgid "You can download it again during your subscription period."
+msgstr "再ダウンロード期間中は会員ページより再ダウンロードが可能です。"
+
+msgid "Month（Automatic Renewal）"
+msgstr "ヶ月（自動更新）"
+
+msgid "Application Date"
+msgstr "お申込み日"
+
+msgid "Charging Interval"
+msgstr "課金間隔"
+
+msgid "Charging Date"
+msgstr "課金日"
+
+msgid "Condition"
+msgstr "状態"
+
+msgid "Status"
+msgstr "契約"
+
+msgid "Settlement Supplier"
+msgstr "決済会社"
+
+msgid "Limit of Card(Month/Year)"
+msgstr "カード(月/年)"
+
+msgid "Data Error"
+msgstr "データエラー"
+
+msgid "Send Error"
+msgstr "送信エラー"
+
+msgid "Update Request Email"
+msgstr "更新依頼メール"
+
+msgid "Credit card update request"
+msgstr "カード情報更新依頼"
+
+msgid "Credit card update processing"
+msgstr "カード情報更新処理"
+
+msgid "Login is necessary to update Credit card. Please work to update it according to the guidance of the next page if You can log in."
+msgstr "カード情報を更新するにはログインが必要です。<br />ログインできましたら、次のページの案内に従って更新処理を行なってください。"
+
+msgid "The value of the Charging Type is abnormal."
+msgstr "課金タイプの値が異常です。"
+
+msgid "The value of the Charging Interval is abnormal."
+msgstr "課金間隔の値が異常です。"
+
+msgid "The value of the Charging Date is abnormal."
+msgstr "課金日の値が異常です。"
+
+msgid "I contact you by an email if I can confirm the receipt of money."
+msgstr "ご入金の確認できましたらメールにてご連絡させていただきます。"
+
+msgid "After the receipt of money, you can download it from your member page."
+msgstr "ご入金後に会員ページよりダウンロードが可能となります。"
+
+msgid "I am in the dispatch of the product if I can confirm the receipt of money."
+msgstr "ご入金が確認できましたら商品の発送準備に入らせて頂きます。"
+
+msgid "Card information update processing was completed. Thank you."
+msgstr "カード情報更新処理が完了いたしました。ありがとうございました。<br />今後ともよろしくお願いいたします。"
+
+msgid "Expired"
+msgstr "有効期限切れ"
+
+msgid "An error occurred. Please refer to a manager."
+msgstr "エラーが発生しました。管理者にお問合せください。"
+
+msgid "Download the latest version"
+msgstr "最新版をダウンロード"
+

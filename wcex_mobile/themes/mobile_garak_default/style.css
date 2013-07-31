@@ -1,0 +1,527 @@
+@charset "utf-8";
+/*
+Theme Name: Mobile Garak Default Theme
+Theme URI: http://www.welcart.com/
+Description: このテーマは、WCEX Mobile プラグインが利用するテーマですので、有効化しないで下さい。有効化するとPC での表示が崩れます。このテーマは自由に編集できます。WCEX Mobile を利用しない場合は削除できます。
+Version: 1.0
+Author: Collne Inc.
+*/
+
+/**********************************************/
+/* base */
+/**********************************************/
+body {
+	background: #FFF;
+	font-size: 0.8em;
+}
+table {
+	width: 100%;
+	font-size: 1.0em;
+}
+table th {
+	text-align: left;
+}
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+}
+.aleft {
+	text-align: left;
+}
+.aright {
+	text-align: right;
+}
+.acenter {
+	text-align: center;
+}
+/**********************************************/
+/* header.php */
+/**********************************************/
+.header {
+	background: #FFF;
+}
+.telop{
+	background: #555;
+	color: #FFF;
+	display:-wap-marquee;
+}
+.h_title {
+	background: #000;
+	color: #FFF;
+	font-size: large;
+	text-align: center;
+}
+.h_member {
+	padding: 10px 0;
+	background: #CCC;
+	text-align: center;
+	font-size: small;
+}
+.h_cart {
+	background: #CCC;
+	text-align: center;
+}
+/**********************************************/
+/* home.php */
+/**********************************************/
+.mainnavi {
+	padding: 10px;
+	background: #E1E1E1;
+	white-space: nowrap;
+}
+.mainnavi span {
+	margin: 0;
+	padding: 0;
+}
+.widget_title {
+	background: #666;
+	color: #FFF;
+	text-align: center;
+}
+.widget_title img {
+	vertical-align: text-top;
+}
+.widget_body {
+	padding: 10px 0;
+}
+.wb_search {
+	padding: 10px;
+}
+#searchform div {
+	text-align: right;
+}
+input.searchtext {
+	width: 55%;
+}
+.widget_body li {
+	border-bottom: #CCC 1px solid;
+}
+.topreco,
+.topreco td {
+	border-collapse: collapse;
+	border: #CCC 3px solid;
+}
+.topreco {
+	font-size: 0.7em;
+}
+.topreco td {
+	width: 74px;
+	vertical-align: top;
+}
+.topreco .thumimg {
+	text-align: center;
+}
+.topbest {
+	width: 100%;
+	border-collapse: collapse;
+}
+.topbest td {
+	padding: 5px;
+}
+.topbest .rank_num {
+	width: 25px;
+	text-align: center;
+}
+.topbest .rank_img {
+	width: 50px;
+}
+.topbest .rank_tlt {
+}
+.topbest .rank_1 {
+	background: #CCC;
+}
+.topbest .rank_2 {
+	background: #D5D5D5;
+}
+.topbest .rank_3 {
+	background: #DDD;
+}
+.topbest .rank_4 {
+	background: #E5E5E5;
+}
+.topbest .rank_5 {
+	background: #EEE;
+}
+.toppost {
+	width: 100%;
+	border-collapse: collapse;
+}
+.toppost td {
+	border-bottom: #CCC dotted 1px;
+}
+.toppost .date {
+	width: 30%;
+}
+.toppost .title {
+}
+.topcat {
+	width: 100%;
+	border-collapse: collapse;
+}
+.topcat .parent {
+	background: #CCC;
+}
+.topcat .child {
+	background: #EEE;
+	font-size: 0.8em;
+}
+/**********************************************/
+/* category.php */
+/**********************************************/
+.navigation {
+	padding: 10px 0;
+	background: #CCC;
+	text-align: center;
+	font-size: small;
+}
+#category h2 {
+	font-size: 1.0em;
+}
+#category .price {
+	text-align: right;
+}
+#category .entry {
+	font-size: 0.9em;
+}
+#category .itemlist,
+#category .itemlist td {
+	border-collapse: collapse;
+	border: #CCC 3px solid;
+}
+#category .itemlist {
+	width: 100%;
+}
+#category .itemlist td {
+	padding: 5px;
+	vertical-align: top;
+}
+#category .itemlist td.thumimg {
+	padding: 0;
+	width: 70px;
+}
+#category .post {
+	padding: 10px 0;
+	border-bottom: #CCC 1px solid;
+}
+#category .post h2 {
+	padding: 0 0 0 10px;
+	border-left: #333 10px solid;
+}
+#category .post .entry-footer {
+	text-align: right;
+}
+/**********************************************/
+/* /wc_templates/wc_item_single.php */
+/**********************************************/
+#item h1 {
+	padding: 10px 0;
+	color: #C00;
+	font-size: 1.0em;
+}
+#item .subimg {
+	padding: 5px 0;
+}
+#item .subimg,
+#item .subimg td {
+	border-collapse: collapse;
+	border: #FFF 3px solid;
+}
+#item .subimg {
+	font-size: 0.7em;
+}
+#item .subimg td {
+	vertical-align: top;
+}
+#item .sku_name {
+	padding: 5px 0;
+	background: #CCC;
+}
+#item .sku_name .name {
+	color: #333;
+}
+#item .name {
+	color: #C00;
+	font-weight: bold;
+}
+#item .code {
+	color: #999;
+}
+#item .cprice {
+	text-align: right;
+	text-decoration: line-through;
+	font-size: 0.9em;
+}
+#item .price {
+	text-align: right;
+}
+#item .tocart {
+	margin: 10px 0;
+	padding: 10px 0;
+	background-color: #666;
+	text-align: center;
+}
+#item .tocart a {
+	color: #FFF;
+}
+#item .item_custom_field {
+}
+#item .item_custom_field th {
+}
+#item .item_custom_field td {
+}
+#item .itemGpExp {
+	padding: 5px;
+	border: #CCC 3px solid;
+}
+#item .itemGpExp dt {
+	margin: 0;
+	padding: 0;
+}
+#item .itemGpExp dd {
+	margin: 0;
+	padding: 0;
+}
+#item .itemGpExp ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#item .itemGpExp li {
+	margin: 0;
+	padding: 0;
+	font-size: 0.9em;
+}
+#item .option {
+	width: 100%;
+}
+#item .option th {
+	text-align: left;
+}
+#item .option td {
+}
+#item .cartbutton {
+	padding: 10px 0;
+}
+#item .skuquantity {
+	width: 50px;
+}
+#item .soldout {
+	text-align: center;
+	color: #F00;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.error_message {
+	color: #F00;
+}
+#item .assistance_item {
+}
+#item .assistance_item h3 {
+	padding: 5px 0;
+	background: #333;
+	color: #FFF;
+	font-size: 1.1em;
+}
+#item .assistance_item .listbox {
+	border-top: #333 1px solid;
+}
+#item .assistance_item .title {
+}
+#item .assistance_item .price {
+	color: #333;
+}
+/**********************************************/
+/* /wc_templates/cart/ */
+/**********************************************/
+.cart_page_title {
+	padding: 5px 0;
+	background: #777;
+	color: #FFF;
+	text-align: center;
+	font-size: 14px;
+}
+.send {
+	text-align: center;
+}
+.send input {
+	margin-bottom: 5px;
+	width: 90%;
+}
+.gp {
+	background: #EFEFEF;
+}
+.gp_title {
+}
+.gp_row {
+	text-align: right;
+}
+#cart table {
+}
+#cart table th,
+#cart table td {
+	vertical-align: top;
+}
+#cart .item_gp {
+	color: #F00;
+	font-weight: bold;
+}
+#cart .item_option {
+	color:#666;
+	font-size: 0.8em;
+}
+#wc_delivery table th,
+#wc_delivery2 table th,
+#wc_delivery3 table th,
+#customer-info table th,
+#confirm_table th {
+	background: #CCC;
+}
+#wc_delivery table td,
+#wc_delivery2 table td,
+#wc_delivery3 table td,
+#customer-info table td,
+#confirm_table td {
+	padding: 5px 0 10px 0;
+}
+#cart_table {
+}
+#cart_table,
+#cart_table th,
+#cart_table td {
+	border-collapse: collapse;
+}
+#cart_table th,
+#cart_table td {
+	border: #666 1px solid;
+}
+.confirm_num {
+	background: #333;
+	color: #FFF;
+	border-bottom: #FFF 1px solid !important;
+	text-align: center;
+	vertical-align: middle !important;
+}
+.confirm_item {
+	padding: 5px;
+	border-bottom: none !important;
+}
+.confirm_item div div {
+	color: #666;
+}
+.confirm_amount {
+}
+.confirm_unit,
+.confirm_quantity,
+.confirm_amount {
+	border: none !important;
+	text-align: right;
+}
+.confirm_unit {
+	background: #CCC;
+}
+.confirm_quantity {
+	background: #DDD;
+}
+.confirm_amount {
+	background: #EEE;
+}
+#confirm_table h3 {
+	padding: 5px 0;
+	background: #666;
+	color: #FFF;
+	font-size: 1.0em;
+	text-align: center;
+}
+#cart_completion h3 {
+	padding: 15px 0;
+	font-size: 1.0em;
+	text-align: center;
+}
+/**********************************************/
+/* /wc_templates/member/ */
+/**********************************************/
+.member_page_title {
+	padding: 5px 0;
+	background: #777;
+	color: #FFF;
+	text-align: center;
+	font-size: 14px;
+}
+.loginbox {
+	margin: 0 auto;
+	width: 90%;
+}
+.loginbox input {
+	width: 100%;
+}
+#memberpages th {
+	background: #CCC;
+}
+#memberpages td {
+	padding: 5px 0 10px 0;
+}
+#memberpages h3 {
+	padding: 5px 0;
+	background: #666;
+	color: #FFF;
+	font-size: 1.0em;
+	text-align: center;
+}
+/**********************************************/
+/* /wc_templates/wc_search_page.php */
+/**********************************************/
+/**********************************************/
+/* page.php */
+/**********************************************/
+.page_title {
+	padding: 5px 0;
+	background: #777;
+	color: #FFF;
+	text-align: center;
+	font-size: 14px;
+}
+/**********************************************/
+/* inquiry.php */
+/**********************************************/
+.inquiry_table,
+.inquiry_table th,
+.inquiry_table td {
+	border: #666 1px solid;
+	border-collapse: collapse;
+}
+.inquiry_table {
+	margin: 10px 0;
+}
+.inquiry_table th {
+	background: #CCC;
+}
+.inquiry_table td {
+	padding: 5px 0 5px 5px;
+}
+/**********************************************/
+/* single.php */
+/**********************************************/
+.single_title {
+	padding: 5px 0;
+	background: #777;
+	color: #FFF;
+	text-align: center;
+	font-size: 14px;
+}
+/**********************************************/
+/* footer.php */
+/**********************************************/
+.footernavi {
+}
+.footernavi li {
+}
+.copyright,
+.credit {
+	font-size: 0.7em;
+}
+.copyright {
+	color: #999;
+}
+.credit {
+	color: #CCC;
+}

@@ -1,0 +1,54 @@
+/* CSS Document */
+
+.ill_category_table {
+	margin: 0px 0px 15px;
+	border: 1px solid #E8E8E8;
+}
+
+.ill_category_table th {
+	text-align: right;
+	width: 100px;
+	padding-right: 5px;
+}
+
+.ill_category_table td{
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.ill_tables {
+	float: left;
+	width: 50%;
+}
+
+.ill_table {
+	margin: 0px;
+}
+
+.ill_table th {
+	background-color: #FAFAFA;
+	text-align: left;
+	width: 120px;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-weight: normal;
+}
+.ill_table th.ill_style {
+	background-color: #FFFFFF;
+}
+.ill_table th a{
+	color: #318999;
+}
+
+.ill_table td {
+	padding-left: 5px;
+}
+
+.ill_table_block {
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top-width: 1px;
+	border-top-style: dashed;
+	border-top-color: #CCCCCC;
+}
+

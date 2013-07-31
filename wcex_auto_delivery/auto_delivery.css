@@ -1,0 +1,48 @@
+/* CSS Document */
+
+/* = Common
+-------------------------------------------------------------- */
+
+/* = wc_item_single
+-------------------------------------------------------------- */
+#wc_regular {
+	margin-top: 20px;
+	background-color: #F7F7F7;
+	border: #CCC 1px solid;
+}
+#wc_regular .wcr_tlt {
+	line-height: 30px;
+	padding: 0;
+	background-color: #CCC;
+	font-weight: bold;
+	text-indent: 10px;
+}
+#wc_regular .inside {
+	padding: 10px;
+}
+
+/* = cart
+-------------------------------------------------------------- */
+.regular_info {
+	color: #F60;
+}
+.regular_info_title {
+	line-height: 1.5em;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+/* = history
+-------------------------------------------------------------- */
+.continuation {
+	color: #008000;
+	font-weight: bold;
+}
+.stop {
+	color: #800000;
+	font-weight: bold;
+}
+.termination {
+	color: #0000ff;
+	font-weight: bold;
+}

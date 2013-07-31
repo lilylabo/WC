@@ -1,0 +1,248 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WCEX Item List Layout\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-20 00:00+0900\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Welcart <info@welcart.com>\n"
+"Language-Team: Nimbus Woeks LLC\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+
+msgid ""
+"These plug-ins are Welcart specific expansion plug-ins. Please use them with "
+"the original."
+msgstr ""
+"このプラグインはWelcart専用の拡張プラグインです。Welcart本体と一緒にご利用下"
+"さい。"
+
+msgid "Item List Layout"
+msgstr "商品一覧レイアウト"
+
+msgid "New to Old"
+msgstr "新着順"
+
+msgid "Price: Low to High"
+msgstr "価格の安い順"
+
+msgid "Price: High to Low"
+msgstr "価格の高い順"
+
+msgid "Best Selling to Least"
+msgstr "売れ筋順"
+
+msgid "By Item Name"
+msgstr "商品名順"
+
+msgid "By Item Codee"
+msgstr "商品コード順"
+
+msgid "%s Updated"
+msgstr "%s を更新しました"
+
+msgid "%s Added"
+msgstr "%s を追加しました"
+
+msgid "%s Deleted"
+msgstr "%s を削除しました"
+
+msgid "Item Price Information"
+msgstr "商品価格情報"
+
+msgid "Bestselling Item Information"
+msgstr "売れ筋順情報"
+
+msgid "Update of %s Completed"
+msgstr "%s の更新が完了しました"
+
+msgid "Update of %s Not Completed"
+msgstr "%s の更新が完了しませんでした"
+
+msgid "Added Layout"
+msgstr "レイアウトを追加"
+
+msgid "Layout _%s"
+msgstr "レイアウト_%s"
+
+msgid "Update %s"
+msgstr "%s を更新"
+
+msgid "Delete %s"
+msgstr "%s を削除"
+
+msgid "Category"
+msgstr "カテゴリー"
+
+msgid "Other Categories"
+msgstr "その他のカテゴリー"
+
+msgid "All Items"
+msgstr "全商品"
+
+msgid "Result of Multiple Item Search"
+msgstr "商品複合検索結果一覧"
+
+msgid ""
+"Set the Categories to Use. If not Specified, Choose &quot;Other "
+"Categories&quot;"
+msgstr ""
+"適用するカテゴリーを設定します。特に指定が無い場合は「その他のカテゴリー」を"
+"選択してください。"
+
+msgid "Total Column Width"
+msgstr "全体の横幅"
+
+msgid "Choose total layout width. Initially set at 533."
+msgstr "レイアウト全体の横幅を指定します。初期値は533です。"
+
+msgid "Number of Thumbnails"
+msgstr "サムネイルの列数"
+
+msgid ""
+"Choose the number of thumbnails for showcase display. Initially set at 3."
+msgstr "グリッド型の場合のサムネイルの列数を指定します。初期値は3です。"
+
+msgid "Margin Width of Frames"
+msgstr "枠の間隔"
+
+msgid "Choose the margin between frames. Initially set at 10."
+msgstr "枠と枠の間隔（マージン）を指定します。初期値は10です。"
+
+msgid "Inside Margin of Frames"
+msgstr "枠の内側余白"
+
+msgid "Choose inside margin (padding) of frames. Initially set at 5."
+msgstr "枠の内側余白（パディング）を指定します。初期値は5です。"
+
+msgid "Border Width"
+msgstr "枠線の太さ"
+
+msgid ""
+"Choose the width of border. When the value of <br /> is 2 and above,  you "
+"need to fix item_list_layout.css. Border will disappear when set at <br />0. "
+"Initially set at 1."
+msgstr ""
+"枠線の太さ（ボーダーライン）を指定します。<br />値を2以上にした場合は、同時に"
+"item_list_layout.cssの修正も必要となります。<br />0にするとボーダーは消えま"
+"す。初期値は1です。"
+
+msgid "Height of Frames"
+msgstr "枠の高さ"
+
+msgid "Choose the height of frames. Initially set at 240."
+msgstr "枠の高さを指定します。初期値は240です。"
+
+msgid "Height of Text Area"
+msgstr "テキストエリアの高さ"
+
+msgid "Choose the height of text area. Initially set at 50."
+msgstr "枠内のテキストエリアの高さを指定します。初期値は50です。"
+
+msgid "Number of Items per Page"
+msgstr "1ページの商品数"
+
+msgid "Choose the number of items per page. Initially set at 12."
+msgstr "1ページに表示する商品数を指定します。初期値は12 です。"
+
+msgid "Space between Lines"
+msgstr "行の間隔"
+
+msgid "Choose the space between lines. Initially set at 10."
+msgstr "行と行の間隔（マージン）を指定します。初期値は10です。"
+
+msgid "Inside Margin of Lines"
+msgstr "行の内側余白"
+
+msgid "Choose the inside margin of lines (padding). Initially set at 5."
+msgstr "行の内側余白（パディング）を指定します。初期値は5です。"
+
+msgid "Photo Width"
+msgstr "画像の横幅"
+
+msgid ""
+"Choose the thumbnail width. The height will change proportionally. Initially "
+"set at 150."
+msgstr ""
+"サムネイルの横幅を指定します。高さは比例して縮小します。初期値は150です。"
+
+msgid "Header"
+msgstr "ヘッダー"
+
+msgid "You can choose displayed header of the layout with html."
+msgstr "このレイアウトの時に表示させるヘッダーをhtmlで指定できます。"
+
+msgid "Footer"
+msgstr "フッター"
+
+msgid "You can choose displayed footer of the layout with html."
+msgstr "このレイアウトの時に表示させるフッターをhtmlで指定できます。"
+
+msgid "Sort Category"
+msgstr "ソート項目"
+
+msgid "Display Sort Category"
+msgstr "ソート項目の表示"
+
+msgid "Update Sort Category"
+msgstr "ソート項目を更新"
+
+msgid ""
+"Choose categories to display in sorted menu. Menu will not show unless "
+"chosen."
+msgstr ""
+"並び替えメニューに表示する項目を選択します。未選択ではメニューを表示しませ"
+"ん。"
+
+msgid "Update Price Field"
+msgstr "価格フィールド更新"
+
+msgid "Update Popularity Field"
+msgstr "人気順フィールド更新"
+
+msgid "Update Custom Field"
+msgstr "カスタムフィールド更新"
+
+msgid ""
+"Prepare custom fields when sorted by price. When changing item price, you "
+"can change custom field (usces price) at the time, or update all by this "
+"update button."
+msgstr ""
+"価格で並び替え用のカスタムフィールドを準備します。商品価格を変更した場合はそ"
+"の場でカスタムフィールド（usces_price）を変更するか、この更新ボタンで一括更新"
+"します。"
+
+msgid "Popularity Information"
+msgstr "人気順情報"
+
+msgid ""
+"Prepare custom fields when sorted by popularity. Please update by pressing "
+"renew button, as the sales figures are not reflected on time. <br /> custom "
+"field (usces_popular) will be added."
+msgstr ""
+"人気順で並び替え用のカスタムフィールドを準備します。売上実績はリアルタイムで"
+"反映されませんので、定期的にこの更新ボタンで更新してください。<br />カスタム･"
+"フィールド（usces_popular）が追加されます。"
+
+msgid ""
+"When there's category.php in the theme folder, please edit according to "
+"category.php. If there is none, please copy the attached category.php to the "
+"theme folder."
+msgstr ""
+"テーマフォルダにcategory.php がある場合は、付属のcategory.phpを参考に編集して"
+"ください。無い場合は付属のcategory.phpをテーマフォルダにコピーして編集してく"
+"ださい。"
+
+msgid ""
+"When custom fields are updated, custom fields titled usces_price, "
+"usces_popular will be made. If it already exists, it will be updated."
+msgstr ""
+"カスタム･フィールド更新を行うと、usces_price、usces_popular というカスタム"
+"フィールドが生成されます。既に存在する場合は上書きされます。"
+
+msgid "Updating custom fields will take time if there are many items."
+msgstr "商品点数が多いと、カスタム･フィールド更新に時間がかかります。"
+
+msgid "Okay to delete %s ?"
+msgstr "%s を削除します！よろしいですか？"

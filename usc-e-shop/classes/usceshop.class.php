@@ -3615,7 +3615,13 @@ class usc_e_shop
 
 //20110715ysk start 0000203
 		//$error_mes = ( $_POST['member_regmode'] == 'newmemberfromcart' ) ? $this->member_check_fromcart() : $this->member_check();
-		$error_mes = ( $_POST['member_regmode'] == 'newmemberfromcart' or $_POST['member_regmode'] == 'editmemberfromcart' ) ? $this->member_check_fromcart() : $this->member_check();
+//		$error_mes = ( $_POST['member_regmode'] == 'newmemberfromcart' or $_POST['member_regmode'] == 'editmemberfromcart' ) ? $this->member_check_fromcart() : $this->member_check();
+                // 読みにくいので書き換え
+                if (in_array($mode, array('newmemberfromcart', 'editmemberfromcart'))) {
+                    $error_mes = $this->member_check_fromcart();
+                } else {
+                    $error_mes = $this->member_check();
+                }
 //20110715ysk end
 
 		if ( $error_mes != '' ) {
@@ -3657,6 +3663,8 @@ class usc_e_shop
 
 			if( $res !== false ){
 				$this->set_member_meta_value('customer_country', $_POST['member']['country'], $member_id);
+                                
+                                $this->create_member_session_from_db($member_id);
 //20100818ysk start
 				$res = $this->reg_custom_member($member_id);
 //20100818ysk end
@@ -3720,6 +3728,9 @@ class usc_e_shop
 					$user = $_POST['member'];
 					$user['ID'] = $wpdb->insert_id;
 					$this->set_member_meta_value('customer_country', $_POST['member']['country'], $user['ID']);
+                                        
+					$member_id = $wpdb->insert_id;
+                                        $this->create_member_session_from_db($member_id);
 //20110714ysk start 0000207
 //20100818ysk start
 					//$res = $this->reg_custom_member($wpdb->insert_id);
@@ -4390,11 +4401,67 @@ class usc_e_shop
 		return $mes;	
 	}
 	
+        /**
+         * wp_usces_memberテーブルのデータからセッションデータを生成する
+         * テーブル更新時に実行用メソッド
+         */
+        function create_member_session_from_db($id) {
+            global $wpdb;
+            if (!$id) return false;
+            // session key: DB column
+            $array = array(
+                'ID' => 'ID',
+                'mailaddress1' => 'mem_email',
+                'mailaddress2' => 'mem_email',
+                'point' => 'mem_point',
+                'name1' => 'mem_name1',
+                'name2' => 'mem_name2',
+                'name3' => 'mem_name3',
+                'name4' => 'mem_name4',
+                'zipcode' => 'mem_zip',
+                'pref' => 'mem_pref',
+                'address1' => 'mem_address1',
+                'address2' => 'mem_address2',
+                'address3' => 'mem_address3',
+                'tel' => 'mem_tel',
+                'fax' => 'mem_fax',
+                'delivery_flag' => 'mem_delivery_flag',
+                'delivery' => 'mem_delivery',
+                'registered' => 'mem_registered',
+                'nicename' => 'mem_nicename',
+                'country' => 'customer_country',
+                'status' => 'mem_status',
+            );
+            $member_table = $wpdb->prefix . "usces_member";
+            $query = $wpdb->prepare("SELECT * FROM $member_table WHERE ID = %d", (int) $id);
+            $member = $wpdb->get_row( $query, ARRAY_A );
+            if (!$member) {
+                return false;
+            }
+            foreach ($array as $key => $column) {
+                if ($key == 'delivery') {
+                    if ($member[$column]) {
+                        $member[$column] = unserialize($member['mem_delivery']);
+                    } else {
+                        $_SESSION['usces_member'][$key] = '';
+                    }
+                } else if ($key == 'country') {
+                    $_SESSION['usces_member'][$key] = $this->get_member_meta_value('customer_country', $member['ID']);;
+                } else {
+                    $_SESSION['usces_member'][$key] = $member[$column];
+                }
+            }
+            return true;
+        }
+        
 	function member_check() {
 		$mes = '';
+                /**
+                // セッションデータの更新はDB更新後にcreate_member_session_from_dbを使用して行う
 		foreach ( $_POST['member'] as $key => $vlue ) {
 			$_SESSION['usces_member'][$key] = trim($vlue);
 		}
+                */
 		if ( $_POST['member_regmode'] == 'editmemberform' ) {
 			if ( (!WCUtils::is_blank($_POST['member']['password1']) || !WCUtils::is_blank($_POST['member']['password2']) ) && trim($_POST['member']['password1']) != trim($_POST['member']['password2']) )
 				$mes .= __('Password is not correct.', 'usces') . "<br />";

@@ -3898,6 +3898,7 @@ class usc_e_shop
 
 		
 		if ( isset($cookie['rme']) && $cookie['rme'] == 'forever' && !isset($_POST['rememberme']) && !isset($_POST['loginmail'])) {
+                    /** 自動ログイン無効
 			$email = $cookie['name'];
 			$member_table = $wpdb->prefix . "usces_member";
 	
@@ -3946,6 +3947,7 @@ class usc_e_shop
 					return apply_filters( 'usces_filter_member_login', 'member', $member );
 				}
 			}
+                     */
 		} else if ( isset($_POST['loginmail']) && WCUtils::is_blank($_POST['loginmail']) && isset($_POST['loginpass']) && WCUtils::is_blank($_POST['loginpass']) && isset($cookie['rme']) && $cookie['rme'] != 'forever' ) {
 			return 'login';
 		} else if ( isset($_POST['loginmail']) && WCUtils::is_blank($_POST['loginpass']) && isset($cookie['rme']) && $cookie['rme'] != 'forever' ) {
@@ -4000,15 +4002,15 @@ class usc_e_shop
 //20100818ysk end
 					$this->get_current_member();
 					
-					if( isset($_POST['rememberme']) ){
-						$cookie['name'] = $email;
-						$cookie['rme'] = 'forever';
-						$this->set_cookie($cookie);
-					}else{
-						$cookie['name'] = '';
-						$cookie['rme'] = '';
-						$this->set_cookie($cookie);
-					}
+//					if( isset($_POST['rememberme']) ){
+//						$cookie['name'] = $email;
+//						$cookie['rme'] = 'forever';
+//						$this->set_cookie($cookie);
+//					}else{
+//						$cookie['name'] = '';
+//						$cookie['rme'] = '';
+//						$this->set_cookie($cookie);
+//					}
 					
 					do_action( 'usces_action_after_login' );
 					return apply_filters( 'usces_filter_member_login', 'member', $member );

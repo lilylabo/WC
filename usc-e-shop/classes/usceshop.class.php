@@ -3608,6 +3608,7 @@ class usc_e_shop
 		$_POST = $this->stripslashes_deep_post($_POST);
 
 		$member = $this->get_member();
+                $member_id = $member['ID'];// set member_id or ''
 		$mode = $_POST['member_regmode'];
 		$member_table = $wpdb->prefix . "usces_member";
 		$member_meta_table = $wpdb->prefix . "usces_member_meta";
@@ -3623,10 +3624,13 @@ class usc_e_shop
 			return $mode;
 
 		} elseif ( $_POST['member_regmode'] == 'editmemberform' ) {
+                        if (!$member_id ) {
+                            $this->error_message = __('Error:failure in update', 'usces');
+                            return $mode;
+                        }
+			do_action('usces_action_pre_edit_memberdata', $_POST['member'], $member_id);
 
-			do_action('usces_action_pre_edit_memberdata', $_POST['member'], $_POST['member_id']);
-
-			$query = $wpdb->prepare("SELECT mem_pass FROM $member_table WHERE ID = %d", $_POST['member_id']);
+			$query = $wpdb->prepare("SELECT mem_pass FROM $member_table WHERE ID = %d", $member_id);
 			$pass = $wpdb->get_var( $query );
 
 			$password = ( !empty($_POST['member']['password1']) && trim($_POST['member']['password1']) == trim($_POST['member']['password2']) ) ? md5(trim($_POST['member']['password1'])) : $pass;
@@ -3647,19 +3651,19 @@ class usc_e_shop
 					trim($_POST['member']['tel']), 
 					trim($_POST['member']['fax']), 
 					trim($_POST['member']['mailaddress1']), 
-					$_POST['member_id'] 
+					$member_id 
 					);
 			$res = $wpdb->query( $query );
 
 			if( $res !== false ){
-				$this->set_member_meta_value('customer_country', $_POST['member']['country'], $_POST['member_id']);
+				$this->set_member_meta_value('customer_country', $_POST['member']['country'], $member_id);
 //20100818ysk start
-				$res = $this->reg_custom_member($_POST['member_id']);
+				$res = $this->reg_custom_member($member_id);
 //20100818ysk end
-				do_action('usces_action_edit_memberdata', $_POST['member'], $_POST['member_id']);
+				do_action('usces_action_edit_memberdata', $_POST['member'], $member_id);
 				$meta_keys = apply_filters( 'usces_filter_delete_member_pcid', "'zeus_pcid', 'remise_pcid', 'digitalcheck_ip_user_id'" );
 				$query = $wpdb->prepare("DELETE FROM $member_meta_table WHERE member_id = %d AND meta_key IN( $meta_keys )", 
-						$_POST['member_id'] 
+						$member_id 
 						);
 				$res = $wpdb->query( $query );
 
@@ -3805,10 +3809,14 @@ class usc_e_shop
 
 //20110715ysk start 0000203
 		} elseif ( $_POST['member_regmode'] == 'editmemberfromcart' ) {
+                        if (!$member_id) {
+                            $this->error_message = __('Error:failure in update', 'usces');
+                            return $mode;
+                        }
 
-			do_action('usces_action_pre_edit_memberdata', $_POST['customer'], $_POST['member_id']);
+			do_action('usces_action_pre_edit_memberdata', $_POST['customer'], $member_id);
 
-			$query = $wpdb->prepare("SELECT mem_pass FROM $member_table WHERE ID = %d", $_POST['member_id']);
+			$query = $wpdb->prepare("SELECT mem_pass FROM $member_table WHERE ID = %d", $member_id);
 			$pass = $wpdb->get_var( $query );
 
 			$password = ( !empty($_POST['customer']['password1']) && trim($_POST['customer']['password1']) == trim($_POST['customer']['password2']) ) ? md5(trim($_POST['customer']['password1'])) : $pass;
@@ -3829,13 +3837,13 @@ class usc_e_shop
 					trim($_POST['customer']['tel']), 
 					trim($_POST['customer']['fax']), 
 					trim($_POST['customer']['mailaddress1']), 
-					$_POST['member_id'] 
+					$member_id 
 					);
 			$res = $wpdb->query( $query );
 			if( $res !== false ){
-				$this->set_member_meta_value('customer_country', $_POST['customer']['country'], $_POST['member_id']);
-				$res = $this->reg_custom_member($_POST['member_id']);
-				do_action('usces_action_edit_memberdata', $_POST['customer'], $_POST['member_id']);
+				$this->set_member_meta_value('customer_country', $_POST['customer']['country'], $member_id);
+				$res = $this->reg_custom_member($member_id);
+				do_action('usces_action_edit_memberdata', $_POST['customer'], $member_id);
 				unset($_SESSION['usces_member']);
 				$this->member_just_login(trim($_POST['customer']['mailaddress1']), trim($_POST['customer']['password1']));
 				return 'newcompletion';

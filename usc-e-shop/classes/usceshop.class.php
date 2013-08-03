@@ -737,6 +737,11 @@ class usc_e_shop
 		$this->options = get_option('usces');
 
 		if(isset($_POST['usces_option_update'])) {
+                    if ( !wp_verify_nonce($_POST['_wpnonce'],'wc_security_token') ) {
+                        // Exception
+                        $this->action_status = 'caution';
+			$this->action_message = __('A security problem occurred','usces');
+                    } else {
 			$_POST = $this->stripslashes_deep_post($_POST);
 
 			$this->options['campaign_schedule'] = isset($_POST['campaign_schedule']) ? $_POST['campaign_schedule'] : '0';
@@ -749,6 +754,7 @@ class usc_e_shop
 			
 			$this->action_status = 'success';
 			$this->action_message = __('options are updated','usces');
+                    }
 		} else {
 			$this->action_status = 'none';
 			$this->action_message = '';
@@ -792,6 +798,11 @@ class usc_e_shop
 		$this->options = get_option('usces');
 
 		if(isset($_POST['usces_option_update'])) {
+                    if ( !wp_verify_nonce($_POST['_wpnonce'],'wc_security_token') ) {
+                        // Exception
+                        $this->action_status = 'caution';
+			$this->action_message = __('A security problem occurred','usces');
+                    } else {
 			$_POST = $this->stripslashes_deep_post($_POST);
 		
 			$this->options['smtp_hostname'] = trim($_POST['smtp_hostname']);
@@ -824,7 +835,7 @@ class usc_e_shop
 			
 			$this->action_status = 'success';
 			$this->action_message = __('options are updated','usces');
-			
+                    }
 		} else {
 		
 			foreach ( (array)$this->options['mail_data']['title'] as $key => $value ) {
@@ -861,6 +872,11 @@ class usc_e_shop
 		$this->options = get_option('usces');
 
 		if(isset($_POST['usces_option_update'])) {
+                    if ( !wp_verify_nonce($_POST['_wpnonce'],'wc_security_token') ) {
+                        // Exception
+                        $this->action_status = 'caution';
+			$this->action_message = __('A security problem occurred','usces');
+                    } else {
 			$_POST = $this->stripslashes_deep_post($_POST);
 
 			foreach ( $this->options['indi_item_name'] as $key => $value ) {
@@ -880,6 +896,7 @@ class usc_e_shop
 			
 			$this->action_status = 'success';
 			$this->action_message = __('options are updated','usces');
+                    }
 		} else {
 
 			$this->action_status = 'none';
@@ -898,6 +915,11 @@ class usc_e_shop
 		$this->options = get_option('usces');
 
 		if(isset($_POST['usces_option_update'])) {
+                    if ( !wp_verify_nonce($_POST['_wpnonce'],'wc_security_token') ) {
+                        // Exception
+                        $this->action_status = 'caution';
+			$this->action_message = __('A security problem occurred','usces');
+                    } else {
 			$_POST = $this->stripslashes_deep_post($_POST);
 
 			foreach ( $_POST['header'] as $key => $value ) {
@@ -911,6 +933,7 @@ class usc_e_shop
 			
 			$this->action_status = 'success';
 			$this->action_message = __('options are updated','usces');
+                    }
 		} else {
 
 			$this->action_status = 'none';
@@ -934,6 +957,11 @@ class usc_e_shop
 		$this->options = get_option('usces');
 
 		if(isset($_POST['usces_option_update'])) {
+                    if ( !wp_verify_nonce($_POST['_wpnonce'],'wc_security_token') ) {
+                        // Exception
+                        $this->action_status = 'caution';
+			$this->action_message = __('A security problem occurred','usces');
+                    } else {
 			$_POST = $this->stripslashes_deep_post($_POST);
 		
 //20110331ysk start
@@ -1022,6 +1050,7 @@ class usc_e_shop
 				$this->action_status = 'success';
 				$this->action_message = __('options are updated','usces');
 			}
+                    }
 //20110331ysk end
 		} else {
 
@@ -1052,6 +1081,11 @@ class usc_e_shop
 
 	
 		if( isset($_POST['usces_option_update']) ) {
+                    if ( !wp_verify_nonce($_POST['_wpnonce'],'wc_security_token') ) {
+                        // Exception
+                        $this->action_status = 'caution';
+			$this->action_message = __('A security problem occurred','usces');
+                    } else {
 			$_POST = $this->stripslashes_deep_post($_POST);
 			$mes = '';
 		
@@ -1589,7 +1623,7 @@ class usc_e_shop
 //20130225ysk end
 			}
 			
-
+                    }
 		}
 			
 		

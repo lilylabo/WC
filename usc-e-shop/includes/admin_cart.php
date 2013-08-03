@@ -420,6 +420,7 @@ function toggleVisibility(id) {
 	</div>
 </div>
 <form action="" method="post" name="option_form" id="option_form">
+<?php wp_nonce_field( 'wc_security_token' ) ?>
 <input name="usces_option_update" type="submit" class="button" value="<?php _e('change decision','usces'); ?>" />
 <div id="poststuff" class="metabox-holder">
 

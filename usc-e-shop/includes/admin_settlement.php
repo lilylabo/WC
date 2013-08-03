@@ -127,6 +127,7 @@ function toggleVisibility(id) {
 		<?php } ?>
 	<?php } ?>
 	<form action="" method="post" name="zeus_form" id="zeus_form">
+            <?php wp_nonce_field( 'wc_security_token' ) ?>
 		<table class="settle_table">
 			<tr>
 				<th>クレジットカード決済</th>
@@ -273,6 +274,7 @@ function toggleVisibility(id) {
 		<?php } ?>
 	<?php } ?>
 	<form action="" method="post" name="remise_form" id="remise_form">
+            <?php wp_nonce_field( 'wc_security_token' ) ?>
 		<table class="settle_table">
 <!--			<tr>
 				<th><a style="cursor:pointer;" onclick="toggleVisibility('ex_plan_remise');"><?php _e('契約プラン', 'usces'); ?></a></th>
@@ -410,6 +412,7 @@ function toggleVisibility(id) {
 		<?php } ?>
 	<?php } ?>
 	<form action="" method="post" name="jpayment_form" id="jpayment_form">
+            <?php wp_nonce_field( 'wc_security_token' ) ?>
 		<table class="settle_table">
 			<tr>
 				<th><a style="cursor:pointer;" onclick="toggleVisibility('ex_aid_jpayment');"><?php _e('店舗ID', 'usces'); ?></a></th>
@@ -500,6 +503,7 @@ function toggleVisibility(id) {
 		<?php } ?>
 	<?php } ?>
 	<form action="" method="post" name="paypal_form" id="paypal_form">
+            <?php wp_nonce_field( 'wc_security_token' ) ?>
 		<table class="settle_table">
 			<tr>
 				<th><a style="cursor:pointer;" onclick="toggleVisibility('ex_ec_activate_paypal');"><?php _e('PayPal Settlement', 'usces'); ?></a></th>
@@ -563,6 +567,7 @@ function toggleVisibility(id) {
 		<?php } ?>
 	<?php } ?>
 	<form action="" method="post" name="sbps_form" id="sbps_form">
+            <?php wp_nonce_field( 'wc_security_token' ) ?>
 		<table class="settle_table">
 			<tr>
 				<th><a style="cursor:pointer;" onclick="toggleVisibility('ex_merchant_id_sbps');">マーチャントID</a></th>
@@ -715,6 +720,7 @@ function toggleVisibility(id) {
 		<?php } ?>
 	<?php } ?>
 	<form action="" method="post" name="telecom_form" id="telecom_form">
+            <?php wp_nonce_field( 'wc_security_token' ) ?>
 		<table class="settle_table">
 			<tr>
 				<th><a style="cursor:pointer;" onclick="toggleVisibility('ex_clientip_telecom');">クライアントIP</a></th>
@@ -769,6 +775,7 @@ function toggleVisibility(id) {
 		<?php } ?>
 	<?php } ?>
 	<form action="" method="post" name="digitalcheck_form" id="digitalcheck_form">
+            <?php wp_nonce_field( 'wc_security_token' ) ?>
 		<table class="settle_table">
 			<tr>
 				<th>クレジットカード決済</th>
@@ -868,6 +875,7 @@ function toggleVisibility(id) {
 		<?php endif; ?>
 	<?php endif; ?>
 	<form action="" method="post" name="mizuho_form" id="mizuho_form">
+            <?php wp_nonce_field( 'wc_security_token' ) ?>
 		<table class="settle_table">
 			<tr>
 				<th><a style="cursor:pointer;" onclick="toggleVisibility('ex_shopid_mizuho');">加盟店コード</a></th>

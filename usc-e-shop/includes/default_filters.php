@@ -51,6 +51,25 @@ add_action( 'wp_ajax_target_market_ajax', 'target_market_ajax' );
 add_action( 'wp_ajax_usces_admin_ajax', 'usces_admin_ajax' );
 //20120309ysk end
 
+// check token filter action
+//add_action( 'wp_ajax_order_item2cart_ajax', 'order_item2cart_ajax' );
+add_action( 'wp_ajax_order_item_ajax', 'wc_hack_nonce_check', 0);
+add_action( 'wp_ajax_payment_ajax', 'wc_hack_nonce_check', 0 );
+add_action( 'wp_ajax_item_option_ajax', 'wc_hack_nonce_check', 0 );
+add_action( 'wp_ajax_item_sku_ajax', 'wc_hack_nonce_check', 0 );
+add_action( 'wp_ajax_shop_options_ajax', 'wc_hack_nonce_check', 0 );
+add_action( 'wp_ajax_setup_cod_ajax', 'wc_hack_nonce_check', 0 );
+add_action( 'wp_ajax_change_states_ajax', 'wc_hack_nonce_check', 0 );
+add_action( 'wp_ajax_getinfo_ajax', 'wc_hack_nonce_check', 0 );
+add_action( 'wp_ajax_custom_field_ajax', 'wc_hack_nonce_check', 0 );
+add_action( 'wp_ajax_target_market_ajax', 'wc_hack_nonce_check', 0 );
+add_action( 'wp_ajax_usces_admin_ajax', 'wc_hack_nonce_check', 0 );
+function wc_hack_nonce_check() {
+    if (!wp_verify_nonce($_REQUEST['_wpnonce'],'wc_ajax_token')) {
+        die('token error');
+    }
+}
+
 //add_action('template_redirect', array(&$usces, 'maintenance_mode'));
 add_shortcode('company_name', array(&$usces, 'sc_company_name'));
 add_shortcode('zip_code', array(&$usces, 'sc_zip_code'));

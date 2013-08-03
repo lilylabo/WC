@@ -2211,7 +2211,7 @@ class usc_e_shop
 		<script type='text/javascript'>
 		/* <![CDATA[ */
 			uscesL10n = {
-				'requestFile': "<?php echo site_url(); ?>/wp-admin/admin-ajax.php",
+				'requestFile': "<?php echo site_url(); ?>/wp-admin/admin-ajax.php?_wpnonce=<?php echo wp_create_nonce( 'wc_ajax_token' )?>",
 				'USCES_PLUGIN_URL': "<?php echo USCES_PLUGIN_URL; ?>",
 				'version': "<?php echo USCES_VERSION; ?>", 
 				'wcid': "<?php echo get_option('usces_wcid'); ?>", 

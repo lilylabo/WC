@@ -678,6 +678,11 @@ class usc_e_shop
 		
 
 		if(isset($_POST['usces_option_update'])) {
+                    if ( !wp_verify_nonce($_POST['_wpnonce'],'wc_security_token') ) {
+                        // Exception
+                        $this->action_status = 'caution';
+			$this->action_message = __('A security problem occurred','usces');
+                    } else {
 
 			$_POST = $this->stripslashes_deep_post($_POST);
 			$this->options['display_mode'] = isset($_POST['display_mode']) ? trim($_POST['display_mode']) : '';
@@ -716,7 +721,7 @@ class usc_e_shop
 			
 			$this->action_status = 'success';
 			$this->action_message = __('options are updated','usces');
-
+                    }
 		} else {
 			$this->action_status = 'none';
 			$this->action_message = '';
